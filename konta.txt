@@ -1,0 +1,8 @@
+admin: admin@admin.com
+       admin1
+
+manager: manager@manager.com
+	 manager1
+
+client: pawel@pawel.com
+	pawel123

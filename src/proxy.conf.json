@@ -1,0 +1,6 @@
+{
+    "/menu": {
+      "target": "https://restaurant-61041-default-rtdb.europe-west1.firebasedatabase.app/dishes.json",
+      "secure": false
+    }
+  }

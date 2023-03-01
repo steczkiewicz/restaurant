@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="buttons">
+        <button class="new-dish" (click)="onToAddDish()">Add Dish</button>
+        <button class="back" (click)="onBack()">BACK</button>
+    </div>
+        <p style="margin-top: 5vh;" *ngIf="fetchedDishes.length < 1">No Dishes Available!</p>
+    <div class="dishes" *ngIf="fetchedDishes.length >= 1">
+        <div class="single-dish" *ngFor="let dish of fetchedDishes;">
+            <img class="image" [src]="dish.image[0]" alt = "" [routerLink]="'/menu/' + dish.id"/>
+            <h2> {{ dish.dish_name | uppercase }}</h2>
+            <p class="price" *ngIf="this.currencyService.currency == 'usd'">{{ dish.price * 1.2 }} {{this.currencyService.currency | uppercase}}</p>
+            <p class="price" *ngIf="this.currencyService.currency == 'eur'">{{ dish.price }} {{this.currencyService.currency | uppercase}}</p>
+            <div class="buttons">
+                <button (click)="onRemoveDish(dish)" class="remove">REMOVE DISH</button>
+        </div>
+    </div>
+</div>

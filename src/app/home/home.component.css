@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/chalkboard.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 8em;
+    color: #f1eedb;
+    width: 100vw;
+    min-height: 1200px;
+    padding: 0 10rem;
+}
+
+.welcome {
+    margin-top: 6rem;
+}
+
+.description {
+    font-size: 4rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewmenu {   
+    color: #f1eedb;
+    border: 2px solid #f1eedb;
+    background: transparent;
+    height: 55px;
+    min-width: 180px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    transition: all 0.3s ease-out;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.viewmenu:hover {
+    background-color: #f1eedb;
+    color: black;
+}
+
+.map {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+iframe {
+    width: 95vw;
+    min-height: 800px;
+    border: none;
+}
+
+.contact {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.contact p {
+    font-size: 4rem;
+}
+
+
+
+@media (max-width:1000px) {
+    .info {
+        flex-direction: column;
+    }
+
+    .info .map {
+        align-items: center;
+        align-self: center;
+        padding: 0;
+    }
+
+    .info .contact {
+        align-items: center;
+        align-self: center;
+        padding: 0;
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        font-size: 4rem;
+        padding: 2rem;
+    }
+
+    .description {
+        font-size: 3rem;
+    }
+
+    .contact p {
+        font-size: 3rem;
+    }
+}

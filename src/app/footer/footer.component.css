@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: #f1eedb;
+    width: 100vw;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/texture-light.jpg');
+}
+
+p {
+    width: 100%;
+    text-align: center;
+}

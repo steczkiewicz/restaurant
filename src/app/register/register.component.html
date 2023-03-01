@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="form-container">
+        <div class="title">REGISTER</div>
+        <form [formGroup]="modelForm">
+            <div class="user-details">
+                <input type="text" name="email" formControlName="email" placeholder="Email" required>
+                <span *ngIf="formErrors.get('email')">{{ formErrors.get('email') | uppercase}}</span>
+                <input type="text" name="name" formControlName="name" placeholder="Your Name" required>
+                <span *ngIf="formErrors.get('name')">{{ formErrors.get('name') | uppercase}}</span>
+                <input type="password" name="password" formControlName="password" placeholder="Password" required>
+                <span *ngIf="formErrors.get('password')">{{ formErrors.get('password') | uppercase}}</span>
+                <input type="password" name="confirm-password" formControlName="confirmpassword" placeholder="Confirm Password" required>
+                <span *ngIf="formErrors.get('password')">{{ formErrors.get('password') | uppercase}}</span>
+            </div>
+        </form>
+        <button class="submit" (click)="onSubmit(modelForm)">SUBMIT</button>
+        <p class="link" routerLink="/login">Already have an account? Log in.</p>
+    </div>
+</div>

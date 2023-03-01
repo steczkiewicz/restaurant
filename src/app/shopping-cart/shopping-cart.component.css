@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 800px;
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/chalkboard.jpg');
+    padding: 0 10rem;
+}
+
+.yourcart {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: #f1eedb;
+}
+
+.value {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #f1eedb;
+}
+
+.empty {
+    color: #f1eedb;
+    font-size: 3rem;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.item {
+    user-select:none;
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/footer.jpg');
+    box-shadow: 0 7px 20px 5px #00000088;
+    overflow: hidden;
+    transition: .5s all;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60%;
+    min-height: 300px;
+    padding: 2rem 1rem 2rem 10rem;
+    color: #f1eedb;
+    margin: 3rem 0 2rem 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.info p {
+    margin-top: 0.5rem;
+}
+
+.image {
+    width: 320px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center center;
+}

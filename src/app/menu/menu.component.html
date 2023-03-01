@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="currencies">
+        <p>CURRENCY: </p>
+        <a (click)="this.currencyService.currency = 'usd'">USD</a>
+        <a (click)="this.currencyService.currency = 'eur'">EUR</a>
+    </div>
+    <button *ngIf="this.authService.isManagerOrAdmin()" class="editmode" (click)="onToEditMode()">EDIT</button>
+        <p style="margin-top: 5vh;" *ngIf="fetchedDishes.length < 1">No Dishes Available!</p>
+    <div class="dishes" *ngIf="fetchedDishes.length >= 1">
+        <div class="single-dish" *ngFor="let dish of fetchedDishes;">
+            <img class="image" [src]="dish.image[0]" alt = "" [routerLink]="'/menu/' + dish.id"/>
+            <h2> {{ dish.dish_name | uppercase }}</h2>
+            <p class="price" *ngIf="this.currencyService.currency == 'usd'">{{ dish.price * 1.2 }} {{this.currencyService.currency | uppercase}}</p>
+            <p class="price" *ngIf="this.currencyService.currency == 'eur'">{{ dish.price }} {{this.currencyService.currency | uppercase}}</p>
+            <div *ngIf="this.authService.isLoggedIn()" class="buttons">
+                <button class="add" (click)="onAddToCart(dish)">Add</button>
+                <button class="remove" (click)="onRemoveFromCart(dish)">Remove</button>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+    <p class="empty" *ngIf="this.products.size < 1"> YOUR CART IS EMPTY!</p>
+    <div class="items" *ngIf="this.products.size >= 1">
+        <p class="yourcart">YOUR CART:</p>
+        <p class="value" *ngIf="this.currencyService.currency == 'usd'">{{ this.shoppingCartService.sumOfProducts * 1.2 }} {{this.currencyService.currency | uppercase}}</p>
+        <p class="value" *ngIf="this.currencyService.currency == 'eur'">{{ this.shoppingCartService.sumOfProducts }} {{this.currencyService.currency | uppercase}}</p>
+        <div class="item" *ngFor="let dish of this.products.keys()">
+            <div class="info">
+                <p class="name">{{ dish.dish_name }}</p>
+                <p class="cat">{{ dish.category }}</p>
+                <p class="cuisine">{{ dish.cuisine }}</p>
+                <p class="amount">Quantity: {{ this.products.get(dish) }}</p>
+            </div>
+        <div class="image">
+            <img [src]="dish.image[0]" alt="" class="image">
+        </div>
+        </div>
+    </div>
+</div>

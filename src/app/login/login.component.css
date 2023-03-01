@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Work+Sans&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/chalkboard.jpg');
+    min-height: 800px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 2rem;
+    max-width: 100%;
+    color: #f1eedb;
+    padding: 0 10rem;
+    margin: 3rem 0;
+}
+.title {
+    margin: 1rem 1rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+input {
+    min-width: 500px;
+    height: 40px;
+    margin: 1rem 1rem;
+    padding: 0 20px;
+    transition: all 0.3s ease 0s;
+    font-family: 'Bebas Neue', cursive;
+    background: #f1eedb;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 15vw;
+}
+
+button {   
+    color: #f1eedb;
+    border: 2px solid #f1eedb;
+    background: transparent;
+    height: 40px;
+    min-width: 120px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all 0.3s ease-out;
+    font-family: 'Bebas Neue', cursive;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #f1eedb;
+    color: black;
+}
+
+span {
+    font-size: 1rem;
+    color: rgb(202, 7, 98);
+    margin: 0 1vw;
+}
+
+.link {
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 0 2rem;
+    }
+
+    input {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 0 0.5rem;
+    }
+}

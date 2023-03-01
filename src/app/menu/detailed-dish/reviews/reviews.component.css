@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 2rem;
+    max-width: 100%;
+    color: #f1eedb;
+    padding: 0 10rem;
+    margin: 3rem 0;
+}
+.title {
+    margin: 1vh 1vw;
+}
+
+.review-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+input {
+    width: 500px;
+    height: 40px;
+    margin: 1vh 1vw;
+    padding: 0 20px;
+    transition: all 0.3s ease 0s;
+    font-family: 'Bebas Neue', cursive;
+    background: #f1eedb;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 15vw;
+}
+
+button {   
+    color: #f1eedb;
+    border: 2px solid #f1eedb;
+    background: transparent;
+    height: 55px;
+    min-width: 180px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    transition: all 0.3s ease-out;
+    font-family: 'Bebas Neue', cursive;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #f1eedb;
+    color: black;
+}
+
+span {
+    font-size: 1rem;
+    color: rgb(202, 7, 98);
+    margin: 0 1vw;
+}
+
+.review {
+    color: #f1eedb;
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    border: 3px solid #f1eedb;
+    padding: 3rem 5rem;
+    margin-bottom: 1rem;
+}
+
+.review .rNick {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.review .rName {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.review .rContent {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.review .rDate {
+    font-size: 0.8rem;
+    padding: 1rem;
+}

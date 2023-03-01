@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/texture-light.jpg');
+    color: #f1eedb;
+    width: 100vw;
+    min-height: 8rem;
+    padding: 0 10rem;
+}
+
+.brand {
+    font-size: 3em;
+    user-select: none;
+}
+
+.container > div {
+    padding: 0px 20px;
+}
+
+.menu-items {
+    margin-left: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #f1eedb;
+    font-size: 1.5em;
+    transition: all 0.3s ease-out;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #4d443d;
+}
+
+.username {
+    user-select: none;
+}
+
+.username:hover {
+    color: #f1eedb;
+    cursor: default;
+}
+
+.active {
+    color: #4d443d;
+    border-bottom: 2px solid #4d443d;
+}
+
+.active:hover {
+    color: #f1eedb;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 16px;
+    width: 1.8rem;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger span {
+    width: 1.8rem;
+    height: 2px;
+    background: white;
+    position: absolute;
+    transition: all .35s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+.close span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.close span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.close span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+@media (max-width:1168px) {
+    .stick {
+        position: sticky;
+        top: 0;
+    }
+
+    .menu-items {
+        display: none;
+        position: absolute;
+        top: 8rem;
+        left: 50%;
+        width: 100vw;
+        height: 75vh;
+        transform: translateX(-50%);
+    }
+
+    .menu-items ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .username {
+        display: none;
+    }
+
+    .open {
+        display: block;
+        background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/texture-light.jpg');
+    }
+
+    .open ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .open ul li a {
+        font-size: 4rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0 3rem;
+    }
+}

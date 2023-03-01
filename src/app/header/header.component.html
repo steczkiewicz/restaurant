@@ -1,0 +1,21 @@
+<div class="container" [ngClass]="{stick: closed === false}">
+    <div class="brand">
+        G.F. RESTO
+    </div>
+    <div [ngClass]="{open: closed === false}" class="menu-items">
+        <ul>
+            <li><a class="username" *ngIf="this.authService.isLoggedIn() === true"><p>HELLO {{ this.authService.user.username }}</p></a></li>
+            <li><a *ngIf="this.authService.isAdmin() === true" routerLink="/adminpanel" routerLinkActive="active"><p>ADMIN PANEL</p></a></li>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>HOME</p></a></li>
+            <li><a routerLink="/menu" routerLinkActive="active"><p>MENU</p></a></li>
+            <li><a routerLink="/shoppingcart" routerLinkActive="active"><p>CART</p></a></li>
+            <li *ngIf="this.authService.isLoggedIn() === false"><a routerLink="/login" routerLinkActive="active"><p>LOGIN</p></a></li>
+            <li *ngIf="this.authService.isLoggedIn() === true"><a (click)="onLogout()"><p>LOG OUT</p></a></li>
+        </ul>
+    </div>
+    <div (click)="onClickHam()" [ngClass]="{close: closed === false}" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>

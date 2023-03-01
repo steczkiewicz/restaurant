@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url('https://www.greenrebel.ca/wp-content/themes/greenrebel/img/chalkboard.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #f1eedb;
+    width: 100vw;
+    min-height: 1200px;
+    padding: 0 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.persistence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.submit {   
+    color: #f1eedb;
+    border: 2px solid #f1eedb;
+    background: transparent;
+    height: 55px;
+    min-width: 180px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    transition: all 0.3s ease-out;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.submit:hover {
+    background-color: #f1eedb;
+    color: black;
+}

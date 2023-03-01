@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="form-container">
+        <div class="title">LEAVE YOUR OPINION!</div>
+        <form [formGroup]="modelForm">
+            <div class="review-details">
+                <input type="text" name="name" formControlName="name" placeholder="Title" required>
+                <span *ngIf="formErrors.get('name')">{{ formErrors.get('name') | uppercase}}</span>
+                <input type="text" name="review" formControlName="review" placeholder="Review" required>
+                <span *ngIf="formErrors.get('review')">{{ formErrors.get('review') | uppercase}}</span>
+                <input type="text" name="date" formControlName="date" placeholder="Date of order" required>
+                <span *ngIf="formErrors.get('date')">{{ formErrors.get('date') | uppercase}}</span>
+            </div>
+        </form>
+        <button class="add" (click)="onSubmit(modelForm)">ADD REVIEW!</button>
+    </div>
+    <div class="reviews">
+        <div class="review" *ngFor="let review of reviews">
+            <p class="rNick">{{review.nick}}</p>
+            <p class="rName">{{review.name}}</p>
+            <p class="rContent">{{review.review}}</p>
+            <p class="rDate">{{review.date}}</p>
+        </div>
+    </div>
+</div>

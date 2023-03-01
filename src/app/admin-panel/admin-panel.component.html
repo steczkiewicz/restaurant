@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="modelForm">
+        <p>Persistence Mode: </p>
+    <div class="persistence">
+            <input type="radio" value="local" name="persistenceMode" formControlName="persistenceMode" id="local">
+            <label for="local">Local</label>
+            <input type="radio" value="session" name="persistenceMode" formControlName="persistenceMode" id="session">
+            <label for="session">Session</label>
+            <input type="radio" value="none" name="persistenceMode" formControlName="persistenceMode" id="none">
+            <label for="none">None</label>
+    </div>
+    <button class="submit" (click)="onSubmit(modelForm)">SUBMIT</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="form-container">
+        <div class="title">ADD NEW DISH</div>
+        <form [formGroup]="modelForm">
+            <div class="dish-details">
+                <input type="text" name="name" formControlName="name" placeholder="Name" required>
+                <span *ngIf="formErrors.get('name')">{{ formErrors.get('name') | uppercase}}</span>
+                <input type="text" name="image" formControlName="image" placeholder="Image Link" required>
+                <span *ngIf="formErrors.get('image')">{{ formErrors.get('image') | uppercase}}</span>
+                <input type="text" name="category" formControlName="category" placeholder="Category" required>
+                <span *ngIf="formErrors.get('category')">{{ formErrors.get('category') | uppercase}}</span>
+                <input type="text" name="cuisine" formControlName="cuisine" placeholder="Cuisine" required>
+                <span *ngIf="formErrors.get('cuisine')">{{ formErrors.get('cuisine') | uppercase}}</span>
+                <input type="text" name="description" formControlName="description" placeholder="Description" required>
+                <span *ngIf="formErrors.get('description')">{{ formErrors.get('description') | uppercase}}</span>
+                <input type="text" name="ingredients" formControlName="ingredients" placeholder="Ingredients" required>
+                <span *ngIf="formErrors.get('ingredients')">{{ formErrors.get('ingredients') | uppercase}}</span>
+                <input type="number" name="quantity" formControlName="quantity" placeholder="Quantity" required>
+                <span *ngIf="formErrors.get('quantity')">{{ formErrors.get('quantity') | uppercase}}</span>
+                <input type="number" name="price" formControlName="price" placeholder="Price" required>
+                <span *ngIf="formErrors.get('price')">{{ formErrors.get('price') | uppercase}}</span>
+            </div>
+        </form>
+        <div class="buttons">
+            <button class="add" (click)="onSubmit(modelForm)">ADD</button>
+            <button class="back"(click)="onGoBack()">BACK</button>
+        </div>
+    </div>
+</div>
